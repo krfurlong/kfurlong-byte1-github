@@ -37,23 +37,10 @@ def helloIndex():
 @app.errorhandler(404)
 def page_not_found(e):
     """Return a custom 404 error."""
-    return 'Oops, nothing up my sleeve! Nothing at this URL.', 404
+    return 'Oops, nothing up my sleeve! No content is at this URL.', 404
 
 
 @app.errorhandler(500)
 def application_error(e):
     """Return a custom 500 error."""
     return 'Dang, something went wrong! Unexpected error: {}'.format(e), 500   
-   
-#class MainPage(webapp2.RequestHandler):
-#    def get(self):
-#        self.response.headers['Content-Type'] = 'text/plain'
-#        self.response.write('Hello, World!')
-
-
-
-
-#app = webapp2.WSGIApplication([
-#    ('/', MainPage),
-#], debug=True)
-
